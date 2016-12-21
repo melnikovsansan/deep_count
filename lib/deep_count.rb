@@ -9,4 +9,4 @@ module DeepCount
 end
 
 
-ActiveRecord::Relation.send(:include,  DeepCount)
+ActiveRecord::Base.send(:extend,  DeepCount)

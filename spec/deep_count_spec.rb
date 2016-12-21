@@ -36,7 +36,7 @@ RSpec.describe User do
     end
 
     context 'without group' do
-      it { expect(described_class.all.deep_count).to eq 5 }
+      it { expect(described_class.deep_count).to eq 5 }
     end
 
     context 'grouped by one column' do
