@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Alexandr Melnikov"]
   spec.email         = ["amelnikov@ergoserv.com"]
 
-  spec.summary       = %q{Present count with multiple group as nested hash.}
-  spec.homepage      = "http://some.com"
+  spec.summary       = %q{Convert result of count by multiple group to nested hash.}
+  spec.homepage      = "https://github.com/melnikovsansan/deep_count"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|

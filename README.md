@@ -1,8 +1,6 @@
 # DeepCount
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/deep_count`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Convert result of count by multiple group to nested hash.
 
 ## Installation
 
@@ -22,7 +20,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Default ActiveRecord behavior:
+
+```ruby
+User.group(:sex, :role).count #=> {["female", "admin"]=>1, ["male", "admin"]=>1, ["male", "user"]=>3} 
+```
+
+Own solution: 
+
+```ruby
+User.group(:sex, :role).deep_count #=> {"female"=>{"admin"=>1}, "male"=>{"admin"=>1, "user"=>3}} 
+```
 
 ## Development
 
